@@ -15,3 +15,32 @@ print(x)
 
 # Mode value is the value that appears the most number of times
 x = stats.mode(speed)
+print(x)
+
+# Standard Deviation: describes how spread out the values are
+speed = [86,87,88,86,87,85,86]
+x = numpy.std(speed)
+print(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
