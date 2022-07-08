@@ -4,6 +4,7 @@
 import numpy
 from scipy import stats
 import matplotlib.pyplot as plt
+from sklearn.metrics import r2_score
 
 # Mean value is the average value
 speed = [99,86,87,88,111,86,103,87,94,78,77,85,86]
@@ -103,6 +104,13 @@ y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
 mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
 print(r2_score(y, mymodel(x)))
 
+# Predict Future Values
+# Example: Let us try to predict the speed of a car that passes the tollbooth at around 17 P.M:
+x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
+y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+speed = mymodel(17)
+print(speed)
 
 
 
